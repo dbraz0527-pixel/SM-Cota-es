@@ -1,27 +1,40 @@
 export interface User {
-  id: number;
+  id: string;
   name: string;
   email: string;
   role: 'admin' | 'employee';
-  companyId: number;
-  active?: number;
+  company_id: string;
+  active?: boolean;
 }
 
 export interface Quote {
-  id: number;
+  id: string;
   title: string;
   status: 'open' | 'closed';
   notes?: string;
-  createdAt: string;
-  updatedAt: string;
-  userName?: string;
+  created_at: string;
+  updated_at: string;
+  user_id: string;
+  company_id: string;
+  profiles?: { name: string }; // For joined data
 }
 
 export interface QuoteItem {
-  id: number;
-  quoteId: number;
+  id: string;
+  quote_id: string;
   barcode: string;
-  productName: string;
+  product_name: string;
   quantity: number;
-  createdAt: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface ProductCatalog {
+  id: string;
+  company_id: string;
+  barcode: string;
+  product_name: string;
+  last_used_at: string;
+  created_at: string;
+  updated_at: string;
 }
