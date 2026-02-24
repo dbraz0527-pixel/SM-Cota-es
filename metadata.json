@@ -1,0 +1,7 @@
+{
+  "name": "SM Cotações",
+  "description": "Sistema de cotação por coleta de códigos de barras para funcionários e painel administrativo.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
